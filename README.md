@@ -51,25 +51,6 @@ Copy the code snippet (contains agent-id and chat-title)
 
 4. Create index.html File
 
-Use the following template:
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>CSChatBot</title>
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-</head>
-<body>
-  <df-messenger
-    intent="WELCOME"
-    chat-title="CSChatBot"
-    agent-id="YOUR_AGENT_ID"
-    language-code="en"
-  ></df-messenger>
-</body>
-</html>
-
-
 
 5. Test the Chatbot
 
