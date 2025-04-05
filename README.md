@@ -20,3 +20,57 @@ This is a simple chatbot designed for computer engineering students and tech ent
 - JavaScript
 - Dialogflow 
 
+---
+### Steps to Build Simple Dialogflow Chatbot
+
+1. Create a Dialogflow Agent
+
+Go to Dialogflow Console
+
+Click "Create Agent" → name it (e.g., CSChatBot)
+
+
+
+2. Create a Knowledge Base
+
+In the Dialogflow console → Knowledge → Enable it
+
+Create a new Knowledge Base (e.g., WebCloudFAQ)
+
+Upload a CSV FAQ file (questions & answers)
+
+
+
+3. Enable Dialogflow Messenger
+
+Go to Integrations → Enable Dialogflow Messenger
+
+Copy the code snippet (contains agent-id and chat-title)
+
+
+
+4. Create index.html File
+
+Use the following template:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSChatBot</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</head>
+<body>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="CSChatBot"
+    agent-id="YOUR_AGENT_ID"
+    language-code="en"
+  ></df-messenger>
+</body>
+</html>
+
+
+
+5. Test the Chatbot
+
+Open index.html in a browser
