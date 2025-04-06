@@ -1,92 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>CSChatBot – Fullscreen Chat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>CSChatBot - Your Web & Cloud Companion</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #f1f3f6;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #eef2f3, #8e9eab);
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-    }
-
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 15px 20px;
-      font-size: 1.5rem;
-    }
-
-    #chat-container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      overflow-y: auto;
-    }
-
-    .message {
-      padding: 10px 15px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      max-width: 70%;
-    }
-
-    .user {
-      align-self: flex-end;
-      background: #3498db;
-      color: white;
-    }
-
-    .bot {
-      align-self: flex-start;
-      background: #ecf0f1;
+      text-align: center;
       color: #333;
     }
 
-    #input-area {
-      display: flex;
-      padding: 15px;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2f3542;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .info-box {
       background: white;
-      border-top: 1px solid #ccc;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
-    #user-input {
-      flex: 1;
-      padding: 10px;
-      font-size: 1rem;
-    }
-
-    #send-btn {
-      padding: 10px 20px;
-      background: #2ecc71;
-      border: none;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #send-btn:hover {
-      background: #27ae60;
+    df-messenger {
+      --df-messenger-bot-message: #e3f2fd;
+      --df-messenger-button-titlebar-color: #1e90ff;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000;
     }
   </style>
 </head>
 <body>
-
-  <header>💬 CSChatBot – Ask Me Web or Cloud Questions</header>
-
-  <div id="chat-container"></div>
-
-  <div id="input-area">
-    <input type="text" id="user-input" placeholder="Type your question..." />
-    <button id="send-btn">Send</button>
+  <div class="info-box">
+    <h1>Welcome to CSChatBot!</h1>
+    <p>I'm your AI assistant for everything related to <strong>Web Development</strong> and <strong>Cloud Computing</strong>.</p>
+    <p>Click on the chatbot icon in the bottom-right corner and ask your question to get started!</p>
   </div>
 
-  <script src="app.js"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="CSChatBot"
+    agent-id="b3ba68bb-d256-4dfe-a0eb-7cdb6f575a84"
+    language-code="en"
+  ></df-messenger>
 </body>
 </html>
