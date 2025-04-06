@@ -17,7 +17,6 @@ This is a simple chatbot designed for computer engineering students and tech ent
 
 - HTML
 - CSS
-- JavaScript
 - Dialogflow 
 
 ---
