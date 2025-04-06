@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CSChatBot - Your Web & Cloud Companion</title>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -15,21 +20,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       color: #333;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #2f3542;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 40px;
     }
 
     .info-box {
@@ -37,21 +30,49 @@
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      max-width: 90%;
+      width: 600px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #2f3542;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 10px;
     }
 
     df-messenger {
-      --df-messenger-bot-message: #e3f2fd;
       --df-messenger-button-titlebar-color: #1e90ff;
       --df-messenger-chat-background-color: #ffffff;
       --df-messenger-font-color: #000;
+      --df-messenger-bot-message: #e3f2fd;
+    }
+
+    @media (max-width: 480px) {
+      .info-box {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="info-box">
     <h1>Welcome to CSChatBot!</h1>
-    <p>I'm your AI assistant for everything related to <strong>Web Development</strong> and <strong>Cloud Computing</strong>.</p>
-    <p>Click on the chatbot icon in the bottom-right corner and ask your question to get started!</p>
+    <p>Your AI-powered assistant for <strong>Web Development</strong> & <strong>Cloud Computing</strong>.</p>
+    <p>Tap the chatbot icon in the bottom-right and ask your questions!</p>
   </div>
 
   <df-messenger
