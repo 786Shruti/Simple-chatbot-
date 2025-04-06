@@ -51,19 +51,21 @@
       --df-messenger-chat-background-color: #ffffff;
       --df-messenger-font-color: #000;
       --df-messenger-bot-message: #e3f2fd;
+
+      /* Make the chat window bigger */
+      --df-messenger-min-width: 100%;
+      --df-messenger-max-width: 100%;
+      --df-messenger-min-height: 600px;
+      --df-messenger-max-height: 90vh;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 999;
     }
 
-    @media (max-width: 480px) {
-      .info-box {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 0.95rem;
+    @media (max-width: 600px) {
+      df-messenger {
+        --df-messenger-min-height: 85vh;
       }
     }
   </style>
@@ -72,7 +74,7 @@
   <div class="info-box">
     <h1>Welcome to CSChatBot!</h1>
     <p>Your AI-powered assistant for <strong>Web Development</strong> & <strong>Cloud Computing</strong>.</p>
-    <p>Tap the chatbot icon in the bottom-right and ask your questions!</p>
+    <p>Tap the chatbot icon below and ask your questions!</p>
   </div>
 
   <df-messenger
